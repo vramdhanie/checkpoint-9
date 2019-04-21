@@ -1,9 +1,6 @@
 // Import stylesheets
 import './style.css';
 
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 // drill 1
 function one() {
@@ -24,6 +21,26 @@ three();
 
 
 // drill 2
+function process(fn, a, b) {
+  return fn(a, b);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+const drill2 = document.getElementById('drill2');
+drill2.innerHTML = `
+  <h2>Process Function</h2>
+  <div>Add: ${process(add, 6, 4) == 10 ? 'Passed':'Failed'}</div>
+  <div>Subtract: ${process(subtract, 6, 4) == 2 ? 'Passed':'Failed'}</div>
+`;
+
+// drill ? (May drop this)
 function start() {
   console.log('Starting countdown');
 }
